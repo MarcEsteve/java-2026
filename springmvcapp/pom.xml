@@ -14,6 +14,14 @@
   </properties>
 
   <dependencies>
+   <!-- Spring MVC web framework -->
+   <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>7.0.6</version>
+      <scope>compile</scope>
+   </dependency>
+   
    <dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-web</artifactId>
@@ -35,6 +43,16 @@
   </dependencies>
 
   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>${java.version}</release>
+        </configuration>
+      </plugin>
+    </plugins>
     <finalName>springmvcapp</finalName>
   </build>
 </project>
